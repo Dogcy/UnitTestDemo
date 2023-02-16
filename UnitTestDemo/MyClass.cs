@@ -9,28 +9,39 @@ public class MyClass
 
     public bool Func2EndWith(string input)
     {
-        bool result = input.EndsWith(".txt");
-        return  result;
+        var result = input.EndsWith(".txt");
+        return result;
     }
 
-    public int Func3Int(int input)
+    public int Func2EndWithExecptionDemo(string input)
     {
-        return input;
+
+        try
+        {
+            var result = int.Parse(input);
+            return result;
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+            
+       
+        
     }
 
     public Model Func4GetModel()
     {
-        var x = new Model() { Name = "david", Age = 5 };
-        var str = x.Name;
-        return new Model() { Name = "david", Age = 5 };
+        var x = new Model { Name = "david", Age = 5 };
+
+        return x;
     }
 }
-
-
 
 public class Model
 {
     public string? Name { get; set; }
     public int Age { get; set; }
 }
-
