@@ -13,7 +13,7 @@ public class MyClass
         return result;
     }
 
-    public int Func2EndWithExecptionDemo(string input)
+    public int Func3EndWithExecptionDemo(string input)
     {
 
         try
@@ -24,7 +24,7 @@ public class MyClass
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            
             throw;
         }
             
