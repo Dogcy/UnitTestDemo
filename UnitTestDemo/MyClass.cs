@@ -15,21 +15,12 @@ public class MyClass
 
     public int Func3EndWithExecptionDemo(string input)
     {
-        try
-        {
-            var result = int.Parse(input);
-            return result;
-        }
-        catch (Exception e)
-        {
-            
-            throw;
-        }
+        var result = int.Parse(input);
+        return result;
     }
 
     public Model Func4GetModel()
     {
-
         return new Model() { Name = "david", Age = 5 };
     }
 }

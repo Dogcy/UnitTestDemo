@@ -40,8 +40,8 @@ public class Tests
     {
         var ex = Assert.Catch<Exception>(() => _myClass.Func3EndWithExecptionDemo(null));
         // StringAssert.Contains("Value cannot be null. (Parameter 's')",ex.Message);
-        var f = typeof(Exception).ToString();
+        var f = typeof(ArgumentNullException).ToString();
         var f2 = ex.GetType().ToString();
-        StringAssert.Contains(typeof(Exception).ToString(),ex.GetType().ToString());
+        StringAssert.Contains(typeof(ArgumentNullException).ToString(),ex.GetType().ToString());
     }
 }
