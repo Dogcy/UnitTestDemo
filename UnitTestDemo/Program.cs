@@ -1,11 +1,5 @@
-﻿using UnitTestDemo;
-
-
-var myclass =  new MyClass();
-    string x = null;
-    myclass.Func3EndWithExecptionDemo(x);
-
-
+﻿
+Console.WriteLine("test");
 // catch(DirectoryNotFoundException ex) 
 // { 
 //     //more code 
