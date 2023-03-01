@@ -35,3 +35,21 @@ internal class FakeExtensionManager : IExtensionManager
         return WillBeVaild;
     }
 }
+
+/// <summary>
+/// 假物件模擬異常 假資料
+/// </summary>
+internal class FakeExtensionManager2 : IExtensionManager
+{
+    public bool WillBeVaild = false;
+    public Exception WillThrow = null;
+    public bool IsValid(string fileName)
+    {
+        if(WillThrow !=null)
+        {
+            // 為了讓此案例通過 需在測試方法中增加Try-Catch  (這邊未加入所以在此區將跳出)
+            throw WillThrow;
+        }
+        return WillBeVaild;
+    }
+}
