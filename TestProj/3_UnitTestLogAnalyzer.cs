@@ -24,6 +24,20 @@ public class UnitTestLogAnalyzer
         bool result =  _logAnalyzer_fake.IsValidLogFileName("short.ext");
         Assert.True(result);
     }
+
+    /// <summary>
+    /// 假物件模擬異常
+    /// </summary>
+    [Test]
+    public void IsValidFileName_ExtManagerThrowsException_RetrunsFalse()
+    {
+        FakeExtensionManager2 myFakeManager = new FakeExtensionManager2();
+        myFakeManager.WillThrow = new Exception("this is fake");
+        LogAnalyzer log = new LogAnalyzer(myFakeManager);
+        bool result = log.IsValidLogFileName("anything.anyextension");
+        Assert.False(result);
+
+    }
 }
 
 // 抽離 IExtensionManager 並製作一個fakeClass可以製作UnitTest
