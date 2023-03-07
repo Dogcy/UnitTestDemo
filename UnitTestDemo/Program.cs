@@ -1,5 +1,4 @@
-﻿
-Console.WriteLine("test");
+﻿Console.WriteLine();
 // catch(DirectoryNotFoundException ex) 
 // { 
 //     //more code 
