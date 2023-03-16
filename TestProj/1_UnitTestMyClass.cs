@@ -3,7 +3,7 @@
 namespace TestProj;
 
 [TestFixture]
-public class Tests
+public class UnitTestMyClass
 {
     private MyClass _myClass;
 
